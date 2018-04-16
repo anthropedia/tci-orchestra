@@ -1,0 +1,4 @@
+professionals: cd professionals && PORT=5000 source venv/bin/activate && python app.py
+online: cd online && PORT=5001 source venv/bin/activate && python app.py
+admin: cd admin && DEBUG=1 PORT=5002 source venv/bin/activate && python app.py
+api: cd api && DEBUG=1 PORT=6000 source venv/bin/activate && python app.py
