@@ -1,6 +1,6 @@
-# TCI Factory
+# TCI Orchestra
 
-Manage all microservices together.
+Orchestrate all TCI microservices together.
 
 
 ## Install
