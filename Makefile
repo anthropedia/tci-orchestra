@@ -1,4 +1,4 @@
-mk_venv=python3 -m venv venv && . venv/bin/activate && pip install wheel cython -r requirements.txt
+mk_venv=python3 -m venv venv && . venv/bin/activate && pip install wheel -r requirements.txt
 
 install:
 	-git clone git@bitbucket.org:anthropedia/tci-admin.git admin
@@ -11,6 +11,7 @@ install:
 	cd professionals && ${mk_venv}
 	-git clone https://github.com/anthropedia/tci-online.git online
 	cd online && ${mk_venv}
+	-git clone https://github.com/anthropedia/tci-assets.git assets
 
 generate-token:
 	@echo "Generated token 'abc123'"

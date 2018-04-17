@@ -1,1 +1,12 @@
-Procfile
+# TCI services
+/admin/
+/api/
+/online/
+/professionals/
+/researchers/
+/assets/
+
+# Internals
+/Procfile  # alias
+/venv/
+/log/
