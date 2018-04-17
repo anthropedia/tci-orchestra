@@ -22,7 +22,6 @@ run:
 
 start-gunicorn:  # service=<str:service_name> port=<int:port_number> <[optional] str:gunicorn_args>
 	mkdir -p ./log/${service}/
-	. ./venv/bin/activate
 	cd ${service} && \
 		. ./venv/bin/activate && \
 		pip install -r requirements.txt -r ../requirements.txt && \

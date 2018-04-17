@@ -5,7 +5,7 @@ Orchestrate all TCI microservices together.
 
 ## Install
 
-run `make install env=dev` (or _prod_ accordingly).
+run `make install`.
 
 
 ## Setup
