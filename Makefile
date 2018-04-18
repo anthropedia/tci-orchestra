@@ -11,7 +11,8 @@ install:
 	cd professionals && ${mk_venv}
 	-git clone https://github.com/anthropedia/tci-online.git online
 	cd online && ${mk_venv}
-	-git clone https://github.com/anthropedia/tci-assets.git assets 2> /dev/null
+	rm -fr assets
+	git clone https://github.com/anthropedia/tci-assets.git assets
 
 generate-token:
 	@echo "Generated token 'abc123'"
