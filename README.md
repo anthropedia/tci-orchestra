@@ -17,4 +17,4 @@ the command line of the Procfile.
 ## Running
 
 Just use your favorite Procfile runner like [Procman](https://theforeman.org/)
-and start the projects: `foreman start`.
+and start the projects: `make run`.
