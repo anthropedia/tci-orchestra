@@ -11,8 +11,8 @@ install:
 	cd professionals && ${mk_venv}
 	-git clone https://github.com/anthropedia/tci-online.git online
 	cd online && ${mk_venv}
-	rm -fr assets
-	git clone https://github.com/anthropedia/tci-assets.git assets
+	-git clone https://github.com/anthropedia/tci-assets.git assets
+	@echo "Install completed! You may now run `make run`."
 
 generate-token:
 	@echo "Generated token 'abc123'"
