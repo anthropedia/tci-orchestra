@@ -6,6 +6,7 @@ install:
 	-git clone git@bitbucket.org:anthropedia/tci-api.git api
 	cd api && ${mk_venv}
 	-git clone git@bitbucket.org:anthropedia/tci-researchers.git researchers
+	mkdir researchers/uploads/
 	cd researchers && ${mk_venv}
 	-git clone git@bitbucket.org:anthropedia/tci-professionals.git professionals
 	cd professionals && ${mk_venv}
@@ -26,6 +27,6 @@ start-gunicorn:  # service=<str:service_name> port=<int:port_number> <[optional]
 	cd ${service} && \
 		. ./venv/bin/activate && \
 		pip install -r requirements.txt -r ../requirements.txt && \
-	 	gunicorn -b 127.0.0.1:${port} app ${gunicorn_args} \
+	 	gunicorn -b 127.0.0.1:${port} --timeout 888 app ${gunicorn_args} \
 		 	--error-logfile ../log/${service}/error.log \
 		 	--access-logfile ../log/${service}/access.log
